@@ -1,0 +1,215 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+p {
+    line-height: 1.5;
+    text-align: justify;
+}
+
+nav {
+    background-color: rgb(213 213 213);
+    display: flex;
+}
+
+nav .left li {
+    display: inline;
+}
+
+nav .left li a {
+    text-decoration: none;
+    padding: 12px;
+    color: black;
+}
+
+nav .left li a.menu-active {
+    color: #808080;
+}
+
+nav img {
+    width: 60px;
+    margin: 4px 0;
+}
+
+nav .left {
+    flex: 50%;
+    padding-left: 90px;
+    display: flex;
+    align-items: center;
+}
+
+nav .right {
+    flex: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 90px;  
+}
+
+nav .right a {
+    background-color: orangered;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+nav .right a:active {
+    opacity: 0.5;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 0;
+}
+
+.container .section {
+    width: 85%;
+    display: flex;
+}
+
+.container .section .left {
+    flex: 30%;
+}
+
+.container .section .left h1 {
+    margin-bottom: 10px;
+}
+
+.container .section .right {
+    /* background-color: blueviolet; */
+    flex: 70%;
+    padding-left: 35px;
+}
+
+.section .right .skill-section {
+    display: flex;
+}
+
+.section .right .skill-section p {
+    text-align: left;   
+}
+
+.section .right .follow-me {
+    display: flex;
+}
+
+.follow-me .icon {
+    padding: 10px 12px;
+    background-color: white;
+    margin-right: 15px;
+    border-radius: 50px;
+    border: 3px solid grey;
+}
+
+.follow-me .icon img {
+    width: 20px;
+}
+
+.follow-me .icon:hover {
+    background-color: grey;
+    border: 3px solid grey;
+    cursor: pointer;
+}
+
+.checkbox-input input {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* Submit Button */
+button:active {
+    opacity: 0.5;
+}
+
+.skills-badge {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.skills-badge span {
+    background-color: white;
+    border: 1px solid;
+    padding: 5px 10px;
+    border-radius: 50px;
+    margin: 3px;
+}
+
+.skills-badge span:hover {
+    background-color: grey;
+    color: white;
+    border: 1px solid grey;
+    cursor: pointer;
+}
+
+.section .right .skill-section {
+    display: flex;
+    justify-content: space-between;
+}
+
+.skill-section > div {
+    width: 180px;
+    margin: 10px;
+}
+
+.skill-section img {
+    width: 120px;
+}
+
+
+@media screen and (max-width: 480px) {
+    nav .right {
+        padding: 0 20px;
+        flex: 30%
+    }
+    
+    nav .left {
+        padding: 0 20px;
+        flex: 70%;
+    }
+
+    nav .left ul {
+        padding-left: 10px;
+    }
+
+    nav .right a {
+        padding: 8px;
+    }
+
+    .container {
+        height: auto;
+        padding: 50px 0;
+    }
+
+    .container .section {
+        flex-direction: column;
+    }
+
+    .section .left .card {
+        width: 85% !important;
+    }
+
+    .container .section .left, .container .section .right {
+        flex: initial;
+        margin-bottom: 30px;
+    }
+
+    .container .section .right {
+        padding-left: 0;
+    }
+
+    .skill-section img {
+        width: 60px;
+    }
+
+    form {
+        width: 100% !important;
+    }
+}
