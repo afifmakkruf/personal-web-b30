@@ -159,6 +159,6 @@ console.log("currentdate.getDay() ",currentdate.getDay())
 console.log("numberOfDays ",numberOfDays)
 console.log("currentdate.getDay() + 1 + numberOfDays ",(currentdate.getDay() + 1 + numberOfDays) / 7);
 
-// setInterval(() => {
-//   renderBlog()
-// }, 1000)
+setInterval(() => {
+  renderBlog()
+}, 1000)
