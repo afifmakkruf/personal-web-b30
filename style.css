@@ -1,9 +1,8 @@
 * {
     font-family: Arial, Helvetica, sans-serif;
-}
-
-body {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 p {
@@ -14,6 +13,10 @@ p {
 nav {
     background-color: rgb(213 213 213);
     display: flex;
+}
+
+nav .left ul {
+    margin-left: 15px;
 }
 
 nav .left li {
@@ -64,10 +67,10 @@ nav .right a:active {
 
 .container {
     display: flex;
-    height: 100vh;
+    height: 128vh;
     justify-content: center;
     align-items: center;
-    padding: 100px 0;
+    padding: 75px 0;
 }
 
 .container .section {
