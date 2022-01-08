@@ -98,14 +98,6 @@ table th, td {
     border: 1px solid black;
 }
 
-.section .right .skill-section {
-    display: flex;
-}
-
-.section .right .skill-section p {
-    text-align: left;   
-}
-
 .section .right .follow-me {
     display: flex;  
     margin-top: 10px;
@@ -162,15 +154,19 @@ button:active {
 .section .right .skill-section {
     display: flex;
     justify-content: space-between;
+    margin-top: 20px;
 }
 
 .skill-section > div {
-    width: 180px;
-    margin: 10px;
+    width: 230px;
 }
 
 .skill-section img {
     width: 120px;
+}
+
+h2.contact {
+  margin-top: 20px
 }
 
 /* Blog Form */
