@@ -67,7 +67,6 @@ nav .right a:active {
 
 .container {
     display: flex;
-    height: 142vh;
     justify-content: center;
     align-items: center;
     padding: 75px 0;
@@ -80,11 +79,17 @@ nav .right a:active {
 
 .container .section .left {
     flex: 30%;
-}
+} 
 
 .container .section .left h1 {
     margin-bottom: 5px;
     margin-top: 20px;   
+}
+
+.container .section .left img {
+  height: 220px;  
+  object-fit: cover;
+  object-position: 0 -5px; 
 }
 
 .container .section .right {
@@ -121,9 +126,12 @@ table th, td {
     cursor: pointer;
 }
 
-.checkbox-input input {
-    font-size: 16px;
-    margin-bottom: 10px;
+.checkbox-input label {
+    font-size: 20px;
+}
+
+.checkbox-input .item {
+  margin-bottom: 2px;
 }
 
 /* Submit Button */
@@ -171,7 +179,7 @@ h2.contact {
 
 /* Blog Form */
 .blog-form {
-    padding: 50px 0;
+    padding: 75px 0;
     display: flex;
     justify-content: center;
   }
@@ -278,8 +286,7 @@ h2.contact {
   
   .blog .blog-list .blog-list-item .blog-image img {
     width: 100%;
-    height: 300px;
-    object-fit: cover;
+    object-fit: cover;  
   }
   
   .blog .blog-list .blog-list-item .blog-content {

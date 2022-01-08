@@ -22,73 +22,77 @@
 
         <div class="container">
             <div class="section">
-                <form style="width: 400px; margin: 0 auto;">
-                    <div style="text-align: center; margin-bottom: 50px;">
-                        <h1>Contact Form</h1>
+                <form style="width: 500px; margin: 0 auto;">
+                    <div >
+                        <h1 style="text-align: center; 
+                        margin-bottom: 40px;">Contact Form</h1>
                     </div>
                     <div>
-                        <label for="input-name" style="font-weight: bold; font-size: 20px;">Name *</label>
+                        <label for="input-name" style="font-weight: 400px; font-size: 20px;">Name *</label>
                         <input id="input-name" type="text" placeholder="input name" 
                         style="
-                        font-size: 16px;
-                        background-color: #d1d1d1; 
+                        font-size: 20px;
+                        font-weight: 400;
+                        background-color: #f3f3f3; 
                         width: 100%;
                         border-radius: 5px;
                         padding: 10px;
-                        margin-top: 5px;
-                        border: 1px solid grey;
+                        margin: 5px 0 20px;
+                        border: 2px solid #c4c4c4;
                         box-sizing: border-box;
-                        margin-bottom: 10px;
                         ">
                         <div class="error"></div>   
                     </div>
 
                     <div>
-                        <label for="input-email" style="font-weight: bold; font-size: 20px;">Email *</label>
+                        <label for="input-email" style="font-weight: 400px; font-size: 20px;">Email *</label>
                         <input id="input-email" type="email" placeholder="input email"
                         style="
-                        font-size: 16px;
-                        background-color: #d1d1d1; 
+                        font-size: 20px;
+                        font-weight: 400;
+                        background-color: #f3f3f3; 
                         width: 100%;
                         border-radius: 5px;
                         padding: 10px;
-                        margin-top: 5px;
-                        border: 1px solid grey;
+                        margin: 5px 0 20px;
+                        border: 2px solid #c4c4c4;
                         box-sizing: border-box;
-                        margin-bottom: 10px;
+                        
                         ">
                         <div class="error"></div>
                     </div>
 
                     <div>
-                        <label for="input-phone" style="font-weight: bold; font-size: 20px;">Phone Number</label>
+                        <label for="input-phone" style="font-weight: 400px; font-size: 20px;">Phone Number</label>
                         <input type="number" id="input-phone"
                         style="
-                        font-size: 16px;
-                        background-color: #d1d1d1; 
+                        font-size: 20px;
+                        font-weight: 400;
+                        background-color: #f3f3f3; 
                         width: 100%;
                         border-radius: 5px;
                         padding: 10px;
-                        margin-top: 5px;
-                        border: 1px solid grey;
+                        margin: 5px 0 20px;
+                        border: 2px solid #c4c4c4;
                         box-sizing: border-box;
-                        margin-bottom: 10px;
+                        
                         ">
                         <div class="error"></div>
                     </div>
                     <div>
-                        <label for="input-subject" style="font-weight: bold; font-size: 20px;">Subject *</label>
+                        <label for="input-subject" style="font-weight: 400px; font-size: 20px;">Subject *</label>
                         <select id="input-subject"
                         style="
-                        background-color: #d1d1d1; 
+                        font-size: 20px;
+                        font-weight: 400;
+                        background-color: #f3f3f3; 
                         width: 100%;
                         border-radius: 5px;
-                        font-size: 16px;
                         padding: 10px;
-                        margin-top: 5px;
-                        border: 1px solid grey;
+                        margin: 5px 0 20px;
+                        border: 2px solid #c4c4c4;
                         box-sizing: border-box;
-                        margin-bottom: 10px;
+                        
                         ">
                             <option value = "" >Select Here</option>
                             <option>I'm Hiring</option>
@@ -100,35 +104,35 @@
                     </div>
                     
                     <div>
-                        <label for="input-message" style="font-weight: bold; font-size: 20px;">Your Message *</label>
+                        <label for="input-message" style="font-weight: 400px; font-size: 20px;">Your Message *</label>
                         <textarea id="input-message"
                         style="
-                        font-size: 16px;
+                        font-size: 20px;
+                        font-weight: 400;
                         resize:vertical; 
                         width: 100%;
-                        background-color: #d1d1d1; 
+                        background-color: #f3f3f3; 
                         border-radius: 5px;
                         padding: 10px;
-                        margin-top: 5px;
-                        border: 1px solid grey;
-                        height: 100px;
-                        margin-bottom: 10px;
+                        margin: 5px 0 20px;
+                        border: 2px solid #c4c4c4;
+                        height: 160px;
                         box-sizing: border-box;
                         "></textarea>
                         <div class="error"></div>
                     </div>
 
                     <div class="checkbox-input">
-                        <div style="font-weight: bold; font-size: 20px;">Choose the required skill ? *</div>
-                        <div>
+                        <div style="font-weight: 400px; font-size: 20px; margin-bottom: 5px">Choose the required skill ? *</div>
+                        <div class="item">
                             <input type="checkbox" id="html" value="HTML" name="skills">
                             <label for="html">HTML</label>
                         </div>
-                        <div>
+                        <div class="item">
                             <input type="checkbox" id="css" value="CSS" name="skills">
                             <label for="css">CSS</label>
                         </div>  
-                        <div>
+                        <div class="item">
                             <input type="checkbox" id="js" value="JavaScript" name="skills">
                             <label for="js">JavaScript</label>
                         </div> 
@@ -142,7 +146,7 @@
                     <button style="
                     border-radius: 5px;
                     padding: 10px 20px;
-                    margin-top: 40px;
+                    margin-top: 50px;
                     font-size: 18px;
                     border: none;
                     background-color: #ff6c3e;
