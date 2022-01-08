@@ -54,21 +54,16 @@ nav .right {
 }
 
 nav .right a {
-    background-color: orangered;
+    background-color: #ee993e;
     color: white;
     padding: 10px 15px;
     border-radius: 5px;
     text-decoration: none;
 }
 
-nav .right a:active {
-    opacity: 0.5;
-}
-
 .container {
     display: flex;
     justify-content: center;
-    align-items: center;
     padding: 75px 0;
 }
 
@@ -126,6 +121,10 @@ table th, td {
     cursor: pointer;
 }
 
+form.contact input {
+    border: 1px solid #c4c4c4;    
+} 
+
 .checkbox-input label {
     font-size: 20px;
 }
@@ -134,9 +133,15 @@ table th, td {
   margin-bottom: 2px;
 }
 
+.blog-form form input:focus,
+form.contact input:focus, 
+textarea:focus {
+  border: 1px solid #ee993e;
+}
+
 /* Submit Button */
-button:active {
-    opacity: 0.5;
+button:active, nav .right a:active {
+    opacity: 0.8;
 }
 
 .skills-badge {
@@ -204,12 +209,13 @@ h2.contact {
     width: 100%;
     font-size: 20px;
     font-weight: 400;
-    padding: 8px;
+    padding: 10px;
     margin-top: 5px;
     margin-bottom: 20px;
     background: #f4f3f3;
     border: 1px solid #c4c4c4;
-    border-radius: 8px;
+    border-radius: 5px;
+    outline: none;
   }
   
   .blog-form form textarea {
@@ -248,8 +254,8 @@ h2.contact {
     margin-top: 50px;
     padding: 8px 20px;
     font-size: 17px;
-    background: #ec4d37;
-    border-radius: 8px;
+    background: #ee993e;
+    border-radius: 5px;
     border: none;
     color: #fff;
     cursor: pointer;
