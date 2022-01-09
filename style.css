@@ -77,8 +77,9 @@ nav .right a {
 } 
 
 .container .section .left h1 {
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     margin-top: 20px;   
+    font-size: 27px;
 }
 
 .container .section .left img {
@@ -95,7 +96,7 @@ nav .right a {
 
 table th, td {
     padding: 8px;
-    border: 1px solid black;
+    border-bottom: 1px solid #ddd;
 }
 
 .section .right .follow-me {
@@ -168,6 +169,7 @@ button:active, nav .right a:active {
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
+    flex-wrap: wrap;
 }
 
 .skill-section > div {
@@ -176,10 +178,13 @@ button:active, nav .right a:active {
 
 .skill-section img {
     width: 120px;
+    margin: 0 auto;
+    display: block;
 }
 
 h2.contact {
-  margin-top: 20px
+  margin-top: 20px;
+  font-size: 24px;
 }
 
 /* Blog Form */
@@ -298,8 +303,15 @@ h2.contact {
   .blog .blog-list .blog-list-item .blog-content {
     padding-left: 20px;
     flex: 2;
+    position: relative;
   }
   
+  .blog .blog-list .blog-list-item .blog-content .distance-time {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+
   .blog .blog-list .btn-group {
     text-align: right;
     margin-bottom: 20px;
@@ -337,6 +349,7 @@ h2.contact {
     font-size: 14px;
     line-height: 20px;
     text-align: justify;
+    margin-bottom: 30px;
   }
   
   /* Blog Detail */
@@ -377,53 +390,57 @@ h2.contact {
     line-height: 140%;
     text-align: justify;
   }
-  
-@media screen and (max-width: 480px) {
-    nav .right {
-        padding: 0 20px;
-        flex: 30%
-    }
-    
-    nav .left {
-        padding: 0 20px;
-        flex: 70%;
-    }
 
-    nav .left ul {
-        padding-left: 10px;
-    }
+/* styles for mobile */
+@media screen and (max-width: 600px) { 
+  .container .section {
+    flex-direction: column;
+  }
 
-    nav .right a {
-        padding: 8px;
-    }
+  .section .right .skill-section {
+    flex-direction: column;
+  }
 
-    .container {
-        height: auto;
-        padding: 50px 0;
-    }
+  .card {
+    margin-bottom: 50px;
+  }
 
-    .container .section {
-        flex-direction: column;
-    }
+  .skill-section > div {
+    width: 100%;
+    margin-top: 10px;
+  }
 
-    .section .left .card {
-        width: 85% !important;
-    }
+  .container .section .right {
+    padding-left: 0;
+  }
 
-    .container .section .left, .container .section .right {
-        flex: initial;
-        margin-bottom: 30px;
-    }
+  nav .left, nav .right {
+    padding: 0 30px;
+  }
 
-    .container .section .right {
-        padding-left: 0;
-    }
+  .blog-form .form-container {
+    width: 85%;
+  }
 
-    .skill-section img {
-        width: 60px;
-    }
+  .blog .blog-list .blog-list-item {
+    flex-direction: column;
+  }
 
-    form {
-        width: 100% !important;
-    }
+  .blog .blog-list .blog-list-item .blog-content {
+    padding-left: 0;
+  }
+
+  .blog-list-item .blog-content h1 {
+    margin: 20px 0 3px;
+  }
+
+  .blog-list .blog-list-item p {
+    margin-top: 10px !important;
+  }
+
+  .container .section {
+    width: 85%;
+  }
+
 }
+

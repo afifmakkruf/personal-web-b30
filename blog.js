@@ -64,10 +64,6 @@ function renderBlog() {
               <img src="${blogs[i].image}" alt="" />
             </div>
             <div class="blog-content">
-              <div class="btn-group">
-                <button class="btn-edit">Edit Post</button>
-                <button class="btn-post">Post Blog</button>
-              </div>
               <h1>
                 <a href="blog-detail.html" target="_blank"
                   >${blogs[i].title}</a
@@ -79,7 +75,7 @@ function renderBlog() {
               <p>
                 ${blogs[i].content}
               </p>
-              <div style="text-align: right;">
+              <div class="distance-time">
                 <span style="font-size: 13px; color: grey;">${getDistanceTime(blogs[i].postAt)}</span>
               </div>
             </div>
@@ -159,6 +155,6 @@ console.log("currentdate.getDay() ",currentdate.getDay())
 console.log("numberOfDays ",numberOfDays)
 console.log("currentdate.getDay() + 1 + numberOfDays ",(currentdate.getDay() + 1 + numberOfDays) / 7);
 
-// setInterval(() => {
-//   renderBlog()
-// }, 1000)
+setInterval(() => {
+  renderBlog()
+}, 1000)
