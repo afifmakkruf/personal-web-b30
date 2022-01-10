@@ -352,72 +352,71 @@ h2.contact {
     margin-bottom: 30px;
   }
   
-  /* Blog Detail */
-  .blog-detail {
-    display: flex;
-    justify-content: center;
-  }
-  
-  .blog-detail-container {
-    width: 80%;
-    margin: 40px 0;
-  }
-  
-  .blog-detail-container img {
-    width: 100%;
-  }
-  
-  .blog-detail-container h1 {
-    font-style: normal;
-    font-weight: 800;
-    font-size: 44px;
-    line-height: 120%;
-    margin-bottom: 15px;
-  }
-  
-  .blog-detail-container .author {
-    font-weight: 100;
-    font-size: 20px;
-    line-height: 120%;
-    margin-bottom: 20px;
-  }
-  
-  .blog-detail-container p {
-    margin-top: 40px;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 24px;
-    line-height: 140%;
-    text-align: justify;
-  }
+/* Blog Detail */
+.blog-detail {
+  display: flex;
+  justify-content: center;
+}
+
+.blog-detail-container {
+  width: 80%;
+  margin: 40px 0;
+}
+
+.blog-detail-container img {
+  width: 100%;
+}
+
+.blog-detail-container h1 {
+  font-style: normal;
+  font-weight: 800;
+  font-size: 44px;
+  line-height: 120%;
+  margin-bottom: 15px;
+}
+
+.blog-detail-container .author {
+  font-weight: 100;
+  font-size: 20px;
+  line-height: 120%;
+  margin-bottom: 20px;
+}
+
+.blog-detail-container p {
+  margin-top: 40px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 140%;
+  text-align: justify;
+}
 
 /* styles for mobile */
-@media screen and (max-width: 600px) { 
+@media screen and (max-width: 420px) { 
   .container .section {
     flex-direction: column;
   }
 
-  .section .right .skill-section {
-    flex-direction: column;
+  nav .right {
+    flex: 40%;
+    padding-right: 30px;
   }
 
-  .card {
-    margin-bottom: 50px;
+  nav .left {
+    flex: 60%;
+    padding-left: 30px;
+  }
+
+  .container .section .right {
+    margin-top: 30px;
+    padding-left: 0;
   }
 
   .skill-section > div {
     width: 100%;
-    margin-top: 10px;
   }
 
-  .container .section .right {
-    padding-left: 0;
-  }
-
-  nav .left, nav .right {
-    padding: 0 30px;
-  }
-
+  /* form blog */
   .blog-form .form-container {
     width: 85%;
   }
@@ -427,19 +426,11 @@ h2.contact {
   }
 
   .blog .blog-list .blog-list-item .blog-content {
-    padding-left: 0;
+    padding: 0;
   }
 
   .blog-list-item .blog-content h1 {
-    margin: 20px 0 3px;
-  }
-
-  .blog-list .blog-list-item p {
-    margin-top: 10px !important;
-  }
-
-  .container .section {
-    width: 85%;
+    margin: 10px 0 5px;
   }
 }
 

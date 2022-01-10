@@ -1,52 +1,32 @@
-// Array of Object 
-// let AllData = [
-//     {
-//         name: 'Samsung',
-//         color: 'Red',
-//         year: 2021
-//     },
-//     {
-//         name: 'Xiaomi',
-//         color: 'Blue',
-//         year: 2021
-//     },
-//     {
-//         name: 'Oppo',
-//         color: 'Red',
-//         year: 2021
-//     }
-// ]
 let blogs = []
 
 function addBlog(a) {
 
     a.preventDefault()
 
-    console.log("Selamat Datang")
-
     let title = document.getElementById('input-blog-title').value
     let content = document.getElementById('input-blog-content').value
-    let image = document.getElementById('input-blog-image').files
+    let image = document.getElementById('input-blog-image')
+    let blogForm = document.getElementById('blog')
 
-    image = URL.createObjectURL(image[0])
 
-    let blog = {
+    if (title == '' || content == '' || image.value == '') {
+      alert('All input field must be fill')
+    } else {
+      image = URL.createObjectURL(image.files[0])
+      console.log(image)
+      
+      let blog = {
         title: title,
         content: content,
         image: image,
-        // postAt: getFullTime(new Date()),
         postAt: new Date(),
         author: 'Yoga Andik'
-    }       
+      }    
 
-    blogs.push(blog)
-    
-    console.log(blogs)
-
-    // for (let i = 0; i < blogs.length; i++) {
-    //     console.log(blogs[i])       
-    // }
-
+      blogs.push(blog)
+      blogForm.reset()
+    }
     renderBlog()
 
 }
@@ -107,8 +87,6 @@ function getFullTime(time) {
 
   let fullTime = `${date} ${month[monthIndex]} ${year} ${hours}:${minutes} WIB`
 
-  // console.log(new Date())
-
   return fullTime
 }
 
@@ -120,20 +98,31 @@ function getDistanceTime(time) {
 
   let distance = timeNow - timePost
   
-  let milisecond = 1000  // seribu dalam 1 detik
-  let secondInHours = 3600 // 1 jam sama dengan 3600 detik
-  let hoursInDay = 23 // 23 jam dalam 1 hari
+  let milisecond = 1000  
+  let secondInHours = 3600 
+  let hoursInDay = 23 
 
   let minutes = 60
   let seconds = 60
 
+  let distanceYear = Math.floor(distance / (milisecond * secondInHours * hoursInDay * 365))
+  let distanceMonth = Math.floor(distance / (milisecond * secondInHours * hoursInDay * 30))
+  let distanceWeek = Math.floor(distance / (milisecond * secondInHours * hoursInDay * 6))
   let distanceDay = Math.floor(distance / (milisecond * secondInHours * hoursInDay)) // untuk mendapatkan hari
   let distanceHours = Math.floor(distance / (milisecond * minutes * seconds)) // untuk mendaptkan jam
   let distanceMinutes = Math.floor(distance / (milisecond * seconds)) // untuk mendapatkan menit
   let distanceSeconds = Math.floor(distance / milisecond) // untuk mendapatkan detik
 
+  console.log(new Date());
+    
 
-  if (distanceDay >= 1) {
+  if (distanceYear >= 1) {
+    return `${distanceYear} year ago`
+  } else if (distanceMonth >= 1) {
+    return `${distanceMonth} month ago`
+  } else if (distanceWeek >= 1) {
+    return `${distanceWeek} week ago` 
+  } else if (distanceDay >= 1) {
     return `${distanceDay} day ago`
   } else if (distanceHours >= 1) {
     return `${distanceHours} hours ago`
@@ -142,19 +131,9 @@ function getDistanceTime(time) {
   } else {
     return `${distanceSeconds} seconds ago`
   }
-    
+  
 }
-
-// Wed Jan 05 2022 23:19:14 GMT+0700 (Western Indonesia Time)
-currentdate = new Date();
-var oneJan = new Date(currentdate.getFullYear(),0,1);
-var numberOfDays = Math.floor((currentdate - oneJan) / (24 *  60 * 60 * 1000));
-var result = Math.ceil(( currentdate.getDay() + 1 + numberOfDays) / 7);
-console.log(`The week number of the current date (${currentdate}) is ${result}.`);  
-console.log("currentdate.getDay() ",currentdate.getDay())
-console.log("numberOfDays ",numberOfDays)
-console.log("currentdate.getDay() + 1 + numberOfDays ",(currentdate.getDay() + 1 + numberOfDays) / 7);
 
 setInterval(() => {
   renderBlog()
-}, 1000)
+}, 6000)
